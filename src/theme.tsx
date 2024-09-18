@@ -1,7 +1,6 @@
 import { createTheme, ThemeOptions, alpha } from '@mui/material/styles';
 import { PaletteMode } from '@mui/material';
 import { DARK_THEME } from './components/constants';
-
 const darkColors = {
   background: {
     primary: '#1e1e25',
@@ -26,7 +25,7 @@ const lightColors = {
   background: {
     primary: '#e0e6e8',
     secondary: '#ffffff',
-    white: '#ffffff', // Add white explicitly
+    white: '#ffffff',
   },
   text: {
     primary: '#212531',
@@ -145,7 +144,26 @@ const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
     MuiButton: {
       styleOverrides: {
         root: {
+          boxSizing: 'border-box',
+          boxShadow: 'none',
+          borderRadius: '4px',
           textTransform: 'none',
+          border: 'none',
+          fontSize: '14px',
+          '&:active': {
+            transform: 'scale(0.98)',
+          },
+
+          color:
+            mode === DARK_THEME
+              ? darkColors.text.primary
+              : lightColors.text.primary,
+          '&:hover': {
+            backgroundColor:
+              mode === DARK_THEME
+                ? darkColors.text.colorText
+                : lightColors.text.colorText,
+          },
         },
       },
     },
@@ -153,6 +171,53 @@ const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
       styleOverrides: {
         root: {
           borderRadius: 8,
+        },
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          minHeight: '35px',
+        },
+        indicator: {
+          height: '1.5px',
+          backgroundColor: darkColors.text.colorText,
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          minHeight: '35px',
+          fontSize: '14px',
+          padding: '0px 12px',
+          textTransform: 'none',
+          display: 'flex',
+          flexDirection: 'row',
+          color:
+            theme.palette.mode === DARK_THEME
+              ? darkColors.text.primary
+              : lightColors.text.primary,
+          '&:hover': {
+            backgroundColor: darkColors.text.colorText,
+          },
+          '&.Mui-selected': {
+            fontWeight: 'bold',
+            color: darkColors.text.colorText,
+          },
+          '&.Mui-selected:hover': {
+            backgroundColor:
+              mode === DARK_THEME
+                ? darkColors.hover.primary
+                : lightColors.hover.primary,
+          },
+          '&.MuiTabs-indicator': {
+            color: darkColors.text.colorText,
+          },
+        }),
+        iconWrapper: {
+          paddingRight: '3px',
+          fontSize: 'medium',
         },
       },
     },
