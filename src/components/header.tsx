@@ -1,11 +1,20 @@
-import React, { SyntheticEvent, useState } from 'react';
 import { Box, Typography, Tabs, Tab } from '@mui/material';
+import {
+  ABOUT,
+  CONTACT,
+  HOME,
+  PORTFOLIO,
+  PROJECTS,
+  SERVICES,
+} from './constants';
 
-const Header = () => {
-  const [tabValue, setTabValue] = useState('Home');
-  const handleTabChange = (event: SyntheticEvent, newTabValue: string) => {
-    setTabValue(newTabValue);
-  };
+export interface TabPropsInterface {
+  tabValue: string;
+  handleTabChange: (event: React.SyntheticEvent, newValue: string) => void;
+}
+
+const Header = (props: TabPropsInterface) => {
+  const { tabValue, handleTabChange } = props;
   return (
     <Box
       display="flex"
@@ -25,12 +34,12 @@ const Header = () => {
         textColor="primary"
         indicatorColor="primary"
         aria-label="Tabs">
-        <Tab label="Home" />
-        <Tab label="About" />
-        <Tab label="Portfolio" />
-        <Tab label="Projects" />
-        <Tab label="Services" />
-        <Tab label="Contact" />
+        <Tab label={HOME} value={HOME} />
+        <Tab label={ABOUT} value={ABOUT} />
+        <Tab label={PORTFOLIO} value={PORTFOLIO} />
+        <Tab label={PROJECTS} value={PROJECTS} />
+        <Tab label={SERVICES} value={SERVICES} />
+        <Tab label={CONTACT} value={CONTACT} />
       </Tabs>
     </Box>
   );
