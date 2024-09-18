@@ -18,7 +18,7 @@ const Header = (props: TabPropsInterface) => {
   return (
     <Box
       display="flex"
-      justifyContent="space-between"
+      justifyContent="space-around"
       alignItems="center"
       padding="5px">
       <Typography component="h1" variant="h2">

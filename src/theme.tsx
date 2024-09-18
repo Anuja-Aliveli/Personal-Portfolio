@@ -45,9 +45,9 @@ const lightColors = {
 const typography = {
   fontFamily: ['"Inter", "sans-serif"'].join(','),
   h1: {
-    fontSize: 22,
+    fontSize: 35,
     fontWeight: 600,
-    lineHeight: 78 / 70,
+    lineHeight: 1.2,
     letterSpacing: -0.2,
   },
   h2: {
@@ -153,11 +153,9 @@ const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
           '&:active': {
             transform: 'scale(0.98)',
           },
-
-          color:
-            mode === DARK_THEME
-              ? darkColors.text.primary
-              : lightColors.text.primary,
+          height: '32px',
+          color: '#ffffff',
+          background: darkColors.text.colorText,
           '&:hover': {
             backgroundColor:
               mode === DARK_THEME
@@ -172,6 +170,30 @@ const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
         root: {
           borderRadius: 8,
         },
+      },
+    },
+    MuiSvgIcon: {
+      styleOverrides: {
+        root: {
+          height: '1rem',
+          width: '1rem',
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          borderRadius: 0,
+          height: '32px',
+          background:
+            theme.palette.mode === DARK_THEME
+              ? darkColors.background.secondary
+              : lightColors.background.secondary,
+          color:
+            theme.palette.mode === DARK_THEME
+              ? darkColors.text.primary
+              : darkColors.text.secondary,
+        }),
       },
     },
     MuiTabs: {
