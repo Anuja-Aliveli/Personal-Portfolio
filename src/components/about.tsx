@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { DARK_THEME, USERDATA } from './constants';
 import { useTheme } from '@mui/material/styles'; // Use MUI's `useTheme` hook, not `@emotion/react`
+import { darkColors, lightColors } from '../theme';
 
 const About = () => {
   const theme = useTheme();
@@ -34,8 +35,17 @@ const About = () => {
             </Box>
           </Box>
         </Grid>
+        <Grid item xs={12} md={9}>
+          <hr
+            style={{
+              border:
+                theme.palette.mode === DARK_THEME
+                  ? `1.5px solid ${darkColors.border}`
+                  : `1.5px solid ${lightColors.border}`,
+            }}
+          />
+        </Grid>
       </Grid>
-      <hr />
     </>
   );
 };

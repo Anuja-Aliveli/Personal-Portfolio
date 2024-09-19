@@ -1,7 +1,7 @@
 import { createTheme, ThemeOptions, alpha } from '@mui/material/styles';
 import { PaletteMode } from '@mui/material';
 import { DARK_THEME } from './components/constants';
-const darkColors = {
+export const darkColors = {
   background: {
     primary: '#1e1e25',
     secondary: '#2b2b33',
@@ -21,7 +21,7 @@ const darkColors = {
   },
 };
 
-const lightColors = {
+export const lightColors = {
   background: {
     primary: '#e0e6e8',
     secondary: '#ffffff',

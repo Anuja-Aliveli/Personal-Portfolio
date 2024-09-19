@@ -29,3 +29,19 @@ hr {
 p {
     line-height: 1.8 !important;
 }
+
+.skill-img {
+    height: 40px;
+    width: 40px;
+}
+
+.skill-container {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 8px;
+}

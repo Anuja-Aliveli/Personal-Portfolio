@@ -4,6 +4,7 @@ import { SyntheticEvent, useState } from 'react';
 import { HOME } from './constants';
 import Home from './home';
 import About from './about';
+import Portfolio from './portfolio';
 
 const Main = () => {
   const [tabValue, setTabValue] = useState<string>(HOME);
@@ -15,6 +16,7 @@ const Main = () => {
       <Header tabValue={tabValue} handleTabChange={handleTabChange} />
       <Home />
       <About />
+      <Portfolio />
     </Box>
   );
 };

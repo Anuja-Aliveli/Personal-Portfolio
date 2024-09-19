@@ -1,8 +1,17 @@
-import { Grid, Typography, Box, Button, IconButton } from '@mui/material';
-import { USERDATA } from './constants';
+import {
+  Grid,
+  Typography,
+  Box,
+  Button,
+  IconButton,
+  useTheme,
+} from '@mui/material';
+import { DARK_THEME, USERDATA } from './constants';
 import DownloadIcon from '@mui/icons-material/Download';
+import { darkColors, lightColors } from '../theme';
 
 const Home = () => {
+  const theme = useTheme();
   const homeData = USERDATA.homeData;
 
   return (
@@ -59,8 +68,17 @@ const Home = () => {
             />
           </Box>
         </Grid>
+        <Grid item xs={12} md={9}>
+          <hr
+            style={{
+              border:
+                theme.palette.mode === DARK_THEME
+                  ? `1.5px solid ${darkColors.border}`
+                  : `1.5px solid ${lightColors.border}`,
+            }}
+          />
+        </Grid>
       </Grid>
-      <hr />
     </>
   );
 };
