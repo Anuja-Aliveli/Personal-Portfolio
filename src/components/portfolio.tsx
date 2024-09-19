@@ -34,7 +34,10 @@ const Portfolio = () => {
                       ? darkColors.background.secondary
                       : lightColors.background.secondary,
                 }}>
-                <img src={item} alt={`skill-${index}`} className="skill-img" />
+                <img src={item.url} alt={item.techName} className="skill-img" />
+                <Typography component="h1" variant="h6" marginTop={1}>
+                  {item.techName}
+                </Typography>
               </Box>
             );
           })}
