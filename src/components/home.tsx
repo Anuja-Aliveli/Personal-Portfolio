@@ -60,6 +60,7 @@ const Home = () => {
           </Box>
         </Grid>
       </Grid>
+      <hr />
     </>
   );
 };
