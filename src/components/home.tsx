@@ -50,12 +50,12 @@ const Home = () => {
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Box>
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
             <img
-              src="../assets/profile-placeholder.jpg"
+              src="https://res.cloudinary.com/dgkw0cxnh/image/upload/v1726770298/Portfolio/Profile_flpmew.jpg"
               alt="profile"
               title="Profile"
-              style={{ maxWidth: '100%', height: 'auto' }}
+              className="profile-img"
             />
           </Box>
         </Grid>

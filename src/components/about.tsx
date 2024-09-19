@@ -1,8 +1,11 @@
 import { Box, Grid, Typography } from '@mui/material';
-import { USERDATA } from './constants';
+import { DARK_THEME, USERDATA } from './constants';
+import { useTheme } from '@mui/material/styles'; // Use MUI's `useTheme` hook, not `@emotion/react`
 
 const About = () => {
+  const theme = useTheme();
   const aboutContent = USERDATA.aboutData.aboutContent;
+
   return (
     <>
       <Grid container spacing={2} justifyContent="center" alignItems="center">
@@ -19,7 +22,10 @@ const About = () => {
                   marginBottom: '10px',
                   marginRight: '10px',
                   border: 'none',
-                  borderTop: '2px solid white',
+                  borderTop:
+                    theme.palette.mode === DARK_THEME
+                      ? '2px solid white'
+                      : '2px solid #212531',
                 }}
               />
               <Typography component="p" variant="body1" marginBottom="10px">

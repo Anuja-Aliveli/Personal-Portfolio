@@ -92,7 +92,7 @@ const typography = {
   },
   p: {
     fontSize: 16,
-    lineHeight: 1.5,
+    lineHeight: 1.8,
   },
   label: {
     fontSize: 16,
