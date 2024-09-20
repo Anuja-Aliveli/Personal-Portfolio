@@ -85,6 +85,7 @@ const typography = {
   body2: {
     fontWeight: 400,
     fontSize: 14,
+    lineHeight: 1.8,
   },
   caption: {
     fontWeight: 400,
@@ -240,6 +241,13 @@ const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
         iconWrapper: {
           paddingRight: '3px',
           fontSize: 'medium',
+        },
+      },
+    },
+    MuiStepLabel: {
+      styleOverrides: {
+        label: {
+          display: 'flex',
         },
       },
     },

@@ -64,6 +64,27 @@ export const USERDATA = {
         techName: 'MySQL',
       },
     ],
+    experienceList: [
+      {
+        companyName: 'ProQsmart',
+        designation: 'Software Engineer (Nov 2023 - Present)',
+        description: [
+          'Led a team of interns at a nuclear startup, contributing to the development of key product features.',
+          'Designed and developed a real- time live auction system using Firebase and Redux.',
+          'Enhanced API performance, reducing response times to under 1 second, improving overall user experience.',
+          'Pioneered the integration of Redux, reducing frontend load time from 5 seconds to 500 milliseconds.',
+          'Implemented middleware to manage role - based access control(RBAC) for secure application access.',
+          'Developed a reusable component library using Material- UI, integrated with Storybook for streamlined UI development.',
+        ],
+      },
+      {
+        companyName: 'InternPe',
+        designation: 'Web Developer (Oct 2023 to Nov 2023)',
+        description: [
+          'Developed four applications: a Calculator, a To-Do List, an E-commerce app, and a Connecting Dots game.',
+        ],
+      },
+    ],
   },
   projectsData: {},
   servicesData: {},

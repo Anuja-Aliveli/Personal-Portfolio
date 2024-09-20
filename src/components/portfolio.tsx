@@ -1,4 +1,16 @@
-import { Box, Grid, Typography, useTheme } from '@mui/material';
+import {
+  Box,
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+  Step,
+  StepContent,
+  StepLabel,
+  Stepper,
+  Typography,
+  useTheme,
+} from '@mui/material';
 import { DARK_THEME, USERDATA } from './constants';
 import { darkColors, lightColors } from '../theme';
 
@@ -22,7 +34,13 @@ const Portfolio = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={9} display="flex" justifyContent="space-between">
+        <Grid
+          item
+          xs={12}
+          md={9}
+          display="flex"
+          justifyContent="space-between"
+          marginBottom={2}>
           {portfolioData.skillsList.map((item, index) => {
             return (
               <Box
@@ -41,6 +59,51 @@ const Portfolio = () => {
               </Box>
             );
           })}
+        </Grid>
+        <Grid item xs={12} md={9}>
+          <Typography component="h1" variant="h1">
+            Experience
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={9}>
+          <Box>
+            <Stepper
+              orientation="vertical"
+              nonLinear
+              sx={{ marginLeft: '10%' }}>
+              {portfolioData.experienceList.map((step, index) => (
+                <Step key={index} active={true}>
+                  <StepLabel sx={{ display: 'flex' }}>
+                    <Typography
+                      component="h1"
+                      variant="h4"
+                      sx={{ marginRight: '20px' }}>
+                      {step.companyName}
+                    </Typography>
+                    <Typography
+                      component="h1"
+                      variant="h4"
+                      color="textSecondary">
+                      {step.designation}
+                    </Typography>
+                  </StepLabel>
+                  <StepContent>
+                    <List>
+                      {step.description.map((point, index) => (
+                        <ListItem key={index} sx={{ padding: '0' }}>
+                          <ListItemText>
+                            <Typography variant="body2">
+                              {point.trim()}
+                            </Typography>
+                          </ListItemText>
+                        </ListItem>
+                      ))}
+                    </List>
+                  </StepContent>
+                </Step>
+              ))}
+            </Stepper>
+          </Box>
         </Grid>
       </Grid>
       <Grid item xs={12} md={9}>
