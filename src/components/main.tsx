@@ -7,6 +7,7 @@ import About from './about';
 import Portfolio from './portfolio';
 import Projects from './projects';
 import Services from './services';
+import Contact from './contact';
 
 const Main = () => {
   const [tabValue, setTabValue] = useState<string>(HOME);
@@ -21,6 +22,7 @@ const Main = () => {
       <Portfolio />
       <Projects />
       <Services />
+      <Contact />
     </Box>
   );
 };
