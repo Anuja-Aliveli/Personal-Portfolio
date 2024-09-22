@@ -1,10 +1,7 @@
 import { Box, Grid, IconButton, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles'; // Use MUI's `useTheme` hook, not `@emotion/react`
 import EmailIcon from '@mui/icons-material/Email';
 
 const Contact = () => {
-  const theme = useTheme();
-
   return (
     <>
       <Grid container spacing={2} justifyContent="center" alignItems="center">
