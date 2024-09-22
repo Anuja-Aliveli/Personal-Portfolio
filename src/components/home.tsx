@@ -47,7 +47,7 @@ const Home = () => {
           <Box sx={{ marginTop: '20px' }}>
             {homeData.links.map((item, index) => (
               <IconButton
-                sx={{ fontSize: 'small', marginRight: '20px' }}
+                sx={{ fontSize: 'small', marginRight: '20px !important' }}
                 key={index}
                 color="primary"
                 href={item.link}

@@ -76,7 +76,7 @@ const Projects = () => {
                   ))}
                   <Box sx={{ display: 'flex', marginTop: '20px' }}>
                     <IconButton
-                      sx={{ fontSize: 'small', marginRight: '20px' }}
+                      sx={{ fontSize: 'small', marginRight: '20px !important' }}
                       color="primary"
                       href={item.link}
                       target="_blank"

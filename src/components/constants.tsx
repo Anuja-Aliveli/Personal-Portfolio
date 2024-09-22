@@ -37,35 +37,35 @@ export const USERDATA = {
   portfolioData: {
     skillsList: [
       {
-        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1726769583/Portfolio/Html_5_free_icons_designed_by_Freepik_zgv4ua.jpg',
+        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727032373/Portfolio/icons8-html-logo-60_tymu81.png',
         techName: 'HTML',
       },
       {
-        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1726769583/Portfolio/CSS_jtvmta.jpg',
+        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727032003/Portfolio/icons8-css-logo-60_zk82fc.png',
         techName: 'CSS',
       },
       {
-        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1726769584/Portfolio/Javascript_ygnevi.jpg',
+        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727032003/Portfolio/icons8-javascript-logo-60_loyhav.png',
         techName: 'JavaScript',
       },
       {
-        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1726769584/Portfolio/React_tkw5ht.jpg',
+        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727032003/Portfolio/icons8-react-60_mpa6dl.png',
         techName: 'React',
       },
       {
-        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1726769583/Portfolio/Angular_qdn3to.jpg',
+        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727032003/Portfolio/icons8-angularjs-60_pgcn4o.png',
         techName: 'Angular',
       },
       {
-        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1726769583/Portfolio/Django_wskvly.jpg',
+        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727032003/Portfolio/icons8-python-60_klysvc.png',
         techName: 'Django',
       },
       {
-        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1726769583/Portfolio/nodeJs_vmjaxu.jpg',
+        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727032003/Portfolio/icons8-node-js-60_kwdzvu.png',
         techName: 'Node.js',
       },
       {
-        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/c_thumb,w_200,g_face/v1726769583/Portfolio/MySQL_wwlktg.jpg',
+        url: 'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727032003/Portfolio/icons8-mysql-logo-60_xqxfih.png',
         techName: 'MySQL',
       },
     ],
