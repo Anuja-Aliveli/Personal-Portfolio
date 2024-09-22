@@ -5,6 +5,7 @@ import { HOME } from './constants';
 import Home from './home';
 import About from './about';
 import Portfolio from './portfolio';
+import Projects from './projects';
 
 const Main = () => {
   const [tabValue, setTabValue] = useState<string>(HOME);
@@ -17,6 +18,7 @@ const Main = () => {
       <Home />
       <About />
       <Portfolio />
+      <Projects />
     </Box>
   );
 };

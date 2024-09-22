@@ -105,16 +105,16 @@ const Portfolio = () => {
             </Stepper>
           </Box>
         </Grid>
-      </Grid>
-      <Grid item xs={12} md={9}>
-        <hr
-          style={{
-            border:
-              theme.palette.mode === DARK_THEME
-                ? `2px solid ${darkColors.border}`
-                : `2px solid ${lightColors.border}`,
-          }}
-        />
+        <Grid item xs={12} md={9}>
+          <hr
+            style={{
+              border:
+                theme.palette.mode === DARK_THEME
+                  ? `1.5px solid ${darkColors.border}`
+                  : `1.5px solid ${lightColors.border}`,
+            }}
+          />
+        </Grid>
       </Grid>
     </>
   );

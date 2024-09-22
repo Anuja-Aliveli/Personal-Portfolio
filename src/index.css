@@ -24,6 +24,7 @@ hr {
 .profile-img {
     width: 250px;
     height: 250px;
+    border-radius: 8px;
 }
 
 p {
@@ -43,5 +44,12 @@ p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border-radius: 8px;
+}
+
+.project-img {
+    width: 350px;
+    height: auto;
+    margin-top: 16px;
     border-radius: 8px;
 }

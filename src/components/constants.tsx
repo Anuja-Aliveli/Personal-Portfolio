@@ -1,6 +1,11 @@
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-
+import CodeIcon from '@mui/icons-material/Code';
+import StorageIcon from '@mui/icons-material/Storage';
+import WebIcon from '@mui/icons-material/Web';
+import ApiIcon from '@mui/icons-material/Api';
+import DevicesIcon from '@mui/icons-material/Devices';
+import LayersIcon from '@mui/icons-material/Layers';
 // Theme Constants
 export const DARK_THEME = 'dark';
 export const LIGHT_THEME = 'light';
@@ -86,7 +91,89 @@ export const USERDATA = {
       },
     ],
   },
-  projectsData: {},
-  servicesData: {},
+  projectsData: {
+    projectsList: [
+      {
+        name: 'Issue Tracker',
+        content: [
+          'Problem: Tracking and managing issues across different project aspects like frontend,backend, and testing is often disorganized,causing delays and inefficiencies.',
+          'Flexible Project Management: Supports both organizational and personal projects.',
+          'Advanced Access Control: Implements (RBAC) for organizational projects.',
+          'Community Engagement: Enables users to follow others, view public projects.',
+          'Open Source Initiative: An ongoing project that will be published as open source, inviting contributions and enhancements from the global developer community.',
+        ],
+        link: '#',
+        github: 'https://github.com/Anuja-Aliveli/frontend_issue_tracker',
+        projectImageUrl:
+          'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1726770298/Portfolio/Profile_flpmew.jpg',
+      },
+      {
+        name: 'Travel App',
+        content: [
+          'User-Centric Experience: Designed to facilitate seamless trip planning and booking for both domestic and international users.',
+          'Comprehensive Travel Solutions: Provides users with personalized destination recommendations, booking options, and detailed tour information.',
+          'Engaging Content: Showcases popular destinations and tour packages, enhancing user engagement and decision-making.',
+        ],
+        link: 'https://anujatravelclient.netlify.app/',
+        github: 'https://github.com/Anuja-Aliveli/Travel',
+        projectImageUrl:
+          'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1726770298/Portfolio/Profile_flpmew.jpg',
+        technologies: ['React', 'Node.Js', 'MongoDB'],
+      },
+      {
+        name: 'Emoji Game',
+        content: [
+          'The Emoji Game Project is a ReactJS-based memory game where the player needs to click on 12 unique emojis without repeating any.',
+          "The game keeps track of the score and the app updates the score and top score based on the player's performance.",
+          "The app updates the score and top score based on the player's performance.",
+        ],
+        link: 'https://anujaemoji.ccbp.tech/',
+        github: 'https://github.com/Anuja-Aliveli/emojiGame',
+        projectImageUrl:
+          'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1726770298/Portfolio/Profile_flpmew.jpg',
+        technologies: ['React'],
+      },
+    ],
+  },
+  servicesData: {
+    serviceList: [
+      {
+        serviceIcon: <WebIcon />, // React and Angular
+        serviceName: 'Frontend Development',
+        serviceContent:
+          'Building responsive and dynamic user interfaces using React and Angular.',
+      },
+      {
+        serviceIcon: <CodeIcon />, // Node.js and Django
+        serviceName: 'Backend Development',
+        serviceContent:
+          'Developing robust server-side applications using Node.js and Django.',
+      },
+      {
+        serviceIcon: <StorageIcon />, // Databases
+        serviceName: 'Database Management',
+        serviceContent:
+          'Designing and maintaining relational databases using MySQL and PostgreSQL.',
+      },
+      {
+        serviceIcon: <LayersIcon />, // Full stack
+        serviceName: 'Full Stack Development',
+        serviceContent:
+          'End-to-end web development, combining frontend and backend technologies for scalable web applications.',
+      },
+      {
+        serviceIcon: <ApiIcon />, // APIs
+        serviceName: 'API Development',
+        serviceContent:
+          'Building and integrating RESTful APIs with secure authentication and data exchange.',
+      },
+      {
+        serviceIcon: <DevicesIcon />, // Responsive design
+        serviceName: 'Responsive Design',
+        serviceContent:
+          'Creating websites that work seamlessly across various devices and screen sizes.',
+      },
+    ],
+  },
   contactData: {},
 };
