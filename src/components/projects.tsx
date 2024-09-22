@@ -69,7 +69,7 @@ const Projects = () => {
                   {item.content.map((contentItem, contentIndex) => (
                     <Typography
                       component="p"
-                      variant="body1"
+                      variant="body2"
                       key={contentIndex}>
                       {contentItem}
                     </Typography>

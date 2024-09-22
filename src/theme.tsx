@@ -5,12 +5,12 @@ export const darkColors = {
   background: {
     primary: '#1e1e25',
     secondary: '#2b2b33',
-    white: '#ffffff', // Add white explicitly
+    white: '#ffffff',
   },
   text: {
     primary: '#ffffff',
-    secondary: '#63676c',
-    teritiary: '#63676c',
+    secondary: '#c3cbd7',
+    teritiary: '#c2c6cc',
     colorText: '#9042c7',
   },
   border: {
@@ -84,7 +84,7 @@ const typography = {
   },
   body2: {
     fontWeight: 400,
-    fontSize: 14,
+    fontSize: 15,
     lineHeight: 1.8,
   },
   caption: {
@@ -249,6 +249,16 @@ const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
         label: {
           display: 'flex',
         },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        body2: ({ theme }) => ({
+          color:
+            theme.palette.mode === DARK_THEME
+              ? darkColors.text.teritiary
+              : lightColors.text.secondary,
+        }),
       },
     },
   },

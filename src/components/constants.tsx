@@ -138,13 +138,13 @@ export const USERDATA = {
   servicesData: {
     serviceList: [
       {
-        serviceIcon: <WebIcon />, // React and Angular
+        serviceIcon: <CodeIcon />, // React and Angular
         serviceName: 'Frontend Development',
         serviceContent:
           'Building responsive and dynamic user interfaces using React and Angular.',
       },
       {
-        serviceIcon: <CodeIcon />, // Node.js and Django
+        serviceIcon: <WebIcon />, // Node.js and Django
         serviceName: 'Backend Development',
         serviceContent:
           'Developing robust server-side applications using Node.js and Django.',
@@ -159,13 +159,13 @@ export const USERDATA = {
         serviceIcon: <LayersIcon />, // Full stack
         serviceName: 'Full Stack Development',
         serviceContent:
-          'End-to-end web development, combining frontend and backend technologies for scalable web applications.',
+          'End-to-end web development, for scalable web applications.',
       },
       {
         serviceIcon: <ApiIcon />, // APIs
         serviceName: 'API Development',
         serviceContent:
-          'Building and integrating RESTful APIs with secure authentication and data exchange.',
+          'Building and integrating RESTful APIs with secure authentication',
       },
       {
         serviceIcon: <DevicesIcon />, // Responsive design
