@@ -105,7 +105,7 @@ export const USERDATA = {
         link: '#',
         github: 'https://github.com/Anuja-Aliveli/frontend_issue_tracker',
         projectImageUrl:
-          'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1726770298/Portfolio/Profile_flpmew.jpg',
+          'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727117809/Screenshot_2024-09-23_235859_wrsjnc.png',
       },
       {
         name: 'Travel App',
@@ -117,7 +117,7 @@ export const USERDATA = {
         link: 'https://anujatravelclient.netlify.app/',
         github: 'https://github.com/Anuja-Aliveli/Travel',
         projectImageUrl:
-          'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1726770298/Portfolio/Profile_flpmew.jpg',
+          'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727117809/Screenshot_2024-09-23_235511_h9khfz.png',
         technologies: ['React', 'Node.Js', 'MongoDB'],
       },
       {
@@ -130,7 +130,7 @@ export const USERDATA = {
         link: 'https://anujaemoji.ccbp.tech/',
         github: 'https://github.com/Anuja-Aliveli/emojiGame',
         projectImageUrl:
-          'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1726770298/Portfolio/Profile_flpmew.jpg',
+          'https://res.cloudinary.com/dgkw0cxnh/image/upload/v1727117809/Screenshot_2024-09-23_234740_xorrs9.png',
         technologies: ['React'],
       },
     ],

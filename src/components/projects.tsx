@@ -42,7 +42,7 @@ const Projects = () => {
                       marginRight: '22px',
                     }}>
                     <img
-                      src="https://res.cloudinary.com/dgkw0cxnh/image/upload/v1726770298/Portfolio/Profile_flpmew.jpg"
+                      src={item.projectImageUrl}
                       alt="profile"
                       title="Profile"
                       className="project-img"
@@ -62,7 +62,7 @@ const Projects = () => {
                   }}>
                   <Typography
                     component="h1"
-                    variant="h1"
+                    variant="h3"
                     sx={{ marginBottom: '16px' }}>
                     {item.name}
                   </Typography>
@@ -103,7 +103,7 @@ const Projects = () => {
                       marginLeft: '16px',
                     }}>
                     <img
-                      src="https://res.cloudinary.com/dgkw0cxnh/image/upload/v1726770298/Portfolio/Profile_flpmew.jpg"
+                      src={item.projectImageUrl}
                       alt="profile"
                       title="Profile"
                       className="project-img"
