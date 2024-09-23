@@ -6,7 +6,7 @@ import Main from './components/main';
 import Header from './components/header';
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
   const [tabValue, setTabValue] = useState<string>(HOME);
   const handleTabChange = (event: SyntheticEvent, newTabValue: string) => {
     setTabValue(newTabValue);
