@@ -10,13 +10,8 @@ import Services from './services';
 import Contact from './contact';
 
 const Main = () => {
-  const [tabValue, setTabValue] = useState<string>(HOME);
-  const handleTabChange = (event: SyntheticEvent, newTabValue: string) => {
-    setTabValue(newTabValue);
-  };
   return (
     <Box sx={{ width: '100vw', height: '100vh', boxShadow: 'none !important' }}>
-      <Header tabValue={tabValue} handleTabChange={handleTabChange} />
       <Home />
       <About />
       <Portfolio />

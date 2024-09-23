@@ -193,7 +193,7 @@ const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
           color:
             theme.palette.mode === DARK_THEME
               ? darkColors.text.primary
-              : darkColors.text.secondary,
+              : lightColors.text.secondary,
         }),
       },
     },

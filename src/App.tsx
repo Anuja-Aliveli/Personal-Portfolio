@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import theme from './theme';
-import { DARK_THEME, LIGHT_THEME } from './components/constants';
+import { DARK_THEME, HOME, LIGHT_THEME } from './components/constants';
 import Main from './components/main';
+import Header from './components/header';
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-
+  const [tabValue, setTabValue] = useState<string>(HOME);
+  const handleTabChange = (event: SyntheticEvent, newTabValue: string) => {
+    setTabValue(newTabValue);
+  };
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
@@ -16,9 +20,12 @@ const App = () => {
   return (
     <ThemeProvider theme={theme(themeMode)}>
       <CssBaseline />
-      <button onClick={toggleTheme}>
-        Toggle to {isDarkMode ? 'Light' : 'Dark'} Mode
-      </button>
+      <Header
+        tabValue={tabValue}
+        handleTabChange={handleTabChange}
+        toggleTheme={toggleTheme}
+        themeMode={themeMode}
+      />
       <Main />
     </ThemeProvider>
   );
