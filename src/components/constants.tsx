@@ -18,6 +18,13 @@ export const PROJECTS = 'Projects';
 export const SERVICES = 'Services';
 export const CONTACT = 'Contact';
 
+export const home = 'home';
+export const about = 'about';
+export const portfolio = 'portfolio';
+export const projects = 'projects';
+export const services = 'services';
+export const contact = 'contact';
+
 export const USERDATA = {
   homeData: {
     name: 'Anuja Aliveli',
