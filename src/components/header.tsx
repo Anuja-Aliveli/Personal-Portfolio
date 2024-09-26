@@ -1,5 +1,14 @@
 import { Box, Typography, Tabs, Tab, IconButton } from '@mui/material';
 import { Link } from 'react-scroll';
+import { useMediaQuery } from '@mui/material'; // Import useMediaQuery for screen size handling
+import ModeNightIcon from '@mui/icons-material/ModeNight';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import WorkIcon from '@mui/icons-material/Work';
+import BuildIcon from '@mui/icons-material/Build';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import PortfolioIcon from '@mui/icons-material/PhotoLibrary'; // Example icon for portfolio
 import {
   about,
   ABOUT,
@@ -15,8 +24,6 @@ import {
   services,
   SERVICES,
 } from './constants';
-import ModeNightIcon from '@mui/icons-material/ModeNight';
-import LightModeIcon from '@mui/icons-material/LightMode';
 
 export interface TabPropsInterface {
   tabValue: string;
@@ -27,13 +34,12 @@ export interface TabPropsInterface {
 
 const Header = (props: TabPropsInterface) => {
   const { toggleTheme, themeMode, handleTabChange, tabValue } = props;
+  const isSmallScreen = useMediaQuery((theme: any) =>
+    theme.breakpoints.down('sm'),
+  );
 
   return (
     <Box
-      display="flex"
-      justifyContent="space-around"
-      alignItems="center"
-      padding="5px"
       sx={{
         position: 'fixed',
         top: 0,
@@ -41,6 +47,10 @@ const Header = (props: TabPropsInterface) => {
         right: 0,
         backgroundColor: 'background.paper',
         zIndex: 1000,
+        display: 'flex',
+        alignItems: 'center',
+        padding: '5px',
+        justifyContent: { xs: 'center', md: 'space-around' },
       }}>
       <Typography component="h1" variant="h2">
         <Box component="span" className="text-color">
@@ -54,9 +64,11 @@ const Header = (props: TabPropsInterface) => {
         indicatorColor="primary"
         aria-label="Tabs"
         value={tabValue}
-        onChange={handleTabChange}>
+        onChange={handleTabChange}
+        sx={{ marginLeft: { xs: '15px', md: '0' } }}>
         <Tab
-          label={HOME}
+          icon={isSmallScreen ? <HomeIcon /> : undefined} // Use undefined instead of null
+          label={isSmallScreen ? '' : HOME} // Use empty string instead of null
           component={Link}
           to={home}
           smooth={true}
@@ -64,7 +76,8 @@ const Header = (props: TabPropsInterface) => {
           value={HOME}
         />
         <Tab
-          label={ABOUT}
+          icon={isSmallScreen ? <InfoIcon /> : undefined} // Use undefined instead of null
+          label={isSmallScreen ? '' : ABOUT} // Use empty string instead of null
           component={Link}
           to={about}
           smooth={true}
@@ -72,7 +85,8 @@ const Header = (props: TabPropsInterface) => {
           value={ABOUT}
         />
         <Tab
-          label={PORTFOLIO}
+          icon={isSmallScreen ? <PortfolioIcon /> : undefined} // Use undefined instead of null
+          label={isSmallScreen ? '' : PORTFOLIO} // Use empty string instead of null
           component={Link}
           to={portfolio}
           smooth={true}
@@ -80,7 +94,8 @@ const Header = (props: TabPropsInterface) => {
           value={PORTFOLIO}
         />
         <Tab
-          label={PROJECTS}
+          icon={isSmallScreen ? <WorkIcon /> : undefined} // Use undefined instead of null
+          label={isSmallScreen ? '' : PROJECTS} // Use empty string instead of null
           component={Link}
           to={projects}
           smooth={true}
@@ -88,7 +103,8 @@ const Header = (props: TabPropsInterface) => {
           value={PROJECTS}
         />
         <Tab
-          label={SERVICES}
+          icon={isSmallScreen ? <BuildIcon /> : undefined} // Use undefined instead of null
+          label={isSmallScreen ? '' : SERVICES} // Use empty string instead of null
           component={Link}
           to={services}
           smooth={true}
@@ -96,7 +112,8 @@ const Header = (props: TabPropsInterface) => {
           value={SERVICES}
         />
         <Tab
-          label={CONTACT}
+          icon={isSmallScreen ? <ContactMailIcon /> : undefined} // Use undefined instead of null
+          label={isSmallScreen ? '' : CONTACT} // Use empty string instead of null
           component={Link}
           to={contact}
           smooth={true}
@@ -104,7 +121,9 @@ const Header = (props: TabPropsInterface) => {
           value={CONTACT}
         />
 
-        <IconButton onClick={toggleTheme} sx={{ marginLeft: '20px' }}>
+        <IconButton
+          onClick={toggleTheme}
+          sx={{ marginLeft: { xs: '0', md: '20px' } }}>
           {themeMode === DARK_THEME ? <ModeNightIcon /> : <LightModeIcon />}
         </IconButton>
       </Tabs>

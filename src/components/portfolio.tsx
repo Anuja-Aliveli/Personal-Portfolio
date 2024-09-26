@@ -45,8 +45,8 @@ const Portfolio = () => {
           md={9}
           display="flex"
           flexWrap="wrap"
-          justifyContent="center"
-          marginBottom={2}>
+          marginBottom={2}
+          sx={{ justifyContent: { xs: 'center', md: 'space-between' } }}>
           {portfolioData.skillsList.map((item, index) => {
             return (
               <Box
@@ -58,7 +58,7 @@ const Portfolio = () => {
                       ? darkColors.background.secondary
                       : lightColors.background.secondary,
                   marginBottom: { xs: '15px', md: '10px' },
-                  marginRight: { xs: '15px', md: '10px' },
+                  margin: { xs: '15px', md: '10px' },
                 }}>
                 <img src={item.url} alt={item.techName} className="skill-img" />
                 <Typography component="h1" variant="h6" marginTop={1}>

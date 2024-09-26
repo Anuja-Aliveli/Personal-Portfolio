@@ -212,6 +212,12 @@ const getDesignTokens = (mode: PaletteMode): ThemeOptions => ({
       styleOverrides: {
         root: ({ theme }) => ({
           minHeight: '35px',
+          [theme.breakpoints.down('md')]: {
+            minWidth: '40px !important',
+          },
+          [theme.breakpoints.up('md')]: {
+            minWidth: 'auto',
+          },
           fontSize: '14px',
           padding: '0px 12px',
           textTransform: 'none',
