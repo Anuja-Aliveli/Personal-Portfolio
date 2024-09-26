@@ -21,7 +21,8 @@ const Home = () => {
         spacing={2}
         justifyContent="center"
         alignItems="center"
-        marginTop="20px">
+        marginTop="20px"
+        sx={{ padding: { xs: '20px', md: '0' } }}>
         <Grid item xs={12} md={3}>
           <Box>
             <Typography component="p" variant="body1" marginBottom="10px">

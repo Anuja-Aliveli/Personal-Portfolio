@@ -19,7 +19,12 @@ const Portfolio = () => {
   const portfolioData = USERDATA.portfolioData;
   return (
     <>
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+        sx={{ padding: { xs: '20px', md: '0' } }}>
         <Grid item xs={12} md={9}>
           <Box>
             <Typography
@@ -39,7 +44,8 @@ const Portfolio = () => {
           xs={12}
           md={9}
           display="flex"
-          justifyContent="space-between"
+          flexWrap="wrap"
+          justifyContent="center"
           marginBottom={2}>
           {portfolioData.skillsList.map((item, index) => {
             return (
@@ -51,6 +57,8 @@ const Portfolio = () => {
                     theme.palette.mode === DARK_THEME
                       ? darkColors.background.secondary
                       : lightColors.background.secondary,
+                  marginBottom: { xs: '15px', md: '10px' },
+                  marginRight: { xs: '15px', md: '10px' },
                 }}>
                 <img src={item.url} alt={item.techName} className="skill-img" />
                 <Typography component="h1" variant="h6" marginTop={1}>

@@ -9,7 +9,12 @@ const About = () => {
 
   return (
     <>
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+        sx={{ padding: { xs: '20px', md: '0' } }}>
         <Grid item xs={12} md={9}>
           <Box>
             <Typography component="h1" variant="h1" marginBottom={2}>

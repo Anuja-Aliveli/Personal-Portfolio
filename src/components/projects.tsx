@@ -10,7 +10,12 @@ const Projects = () => {
 
   return (
     <>
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+        sx={{ padding: { xs: '20px', md: '0' } }}>
         <Grid item xs={12} md={9}>
           <Box>
             <Typography
@@ -23,42 +28,47 @@ const Projects = () => {
             <Box sx={{ display: 'flex' }}></Box>
           </Box>
         </Grid>
+
         <Grid item xs={12} md={9}>
           {projectsContent.map((item, index) => {
             const isEven = index % 2 === 0;
+
             return (
               <Box
                 key={index}
                 sx={{
                   display: 'flex',
+                  flexDirection: { xs: 'column', md: 'row' },
                   marginBottom: '20px',
                 }}>
-                {isEven && (
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      marginRight: '22px',
-                    }}>
-                    <img
-                      src={item.projectImageUrl}
-                      alt="profile"
-                      title="Profile"
-                      className="project-img"
-                      style={{
-                        marginLeft: '16px',
-                        maxWidth: '100%',
-                        height: 'auto',
-                      }}
-                    />
-                  </Box>
-                )}
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginRight: { md: '22px' },
+                    marginBottom: { xs: '16px', md: '0' },
+                    order: { xs: 0, sm: 0, md: isEven ? 1 : 0 },
+                  }}>
+                  <img
+                    src={item.projectImageUrl}
+                    alt="profile"
+                    title="Profile"
+                    className="project-img"
+                    style={{
+                      marginLeft: '16px',
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
+                </Box>
+
                 <Card
                   sx={{
                     marginTop: '16px',
                     padding: '16px',
                     flex: 1,
+                    order: { xs: 1, sm: 1, md: isEven ? 0 : 1 },
                   }}>
                   <Typography
                     component="h1"
@@ -93,28 +103,6 @@ const Projects = () => {
                     </IconButton>
                   </Box>
                 </Card>
-
-                {!isEven && (
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      marginLeft: '16px',
-                    }}>
-                    <img
-                      src={item.projectImageUrl}
-                      alt="profile"
-                      title="Profile"
-                      className="project-img"
-                      style={{
-                        marginLeft: '16px',
-                        maxWidth: '100%',
-                        height: 'auto',
-                      }}
-                    />
-                  </Box>
-                )}
               </Box>
             );
           })}
