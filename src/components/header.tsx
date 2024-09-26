@@ -67,8 +67,8 @@ const Header = (props: TabPropsInterface) => {
         onChange={handleTabChange}
         sx={{ marginLeft: { xs: '15px', md: '0' } }}>
         <Tab
-          icon={isSmallScreen ? <HomeIcon /> : undefined} // Use undefined instead of null
-          label={isSmallScreen ? '' : HOME} // Use empty string instead of null
+          icon={isSmallScreen ? <HomeIcon /> : undefined}
+          label={isSmallScreen ? '' : HOME}
           component={Link}
           to={home}
           smooth={true}
@@ -76,8 +76,8 @@ const Header = (props: TabPropsInterface) => {
           value={HOME}
         />
         <Tab
-          icon={isSmallScreen ? <InfoIcon /> : undefined} // Use undefined instead of null
-          label={isSmallScreen ? '' : ABOUT} // Use empty string instead of null
+          icon={isSmallScreen ? <InfoIcon /> : undefined}
+          label={isSmallScreen ? '' : ABOUT}
           component={Link}
           to={about}
           smooth={true}
@@ -85,8 +85,8 @@ const Header = (props: TabPropsInterface) => {
           value={ABOUT}
         />
         <Tab
-          icon={isSmallScreen ? <PortfolioIcon /> : undefined} // Use undefined instead of null
-          label={isSmallScreen ? '' : PORTFOLIO} // Use empty string instead of null
+          icon={isSmallScreen ? <PortfolioIcon /> : undefined}
+          label={isSmallScreen ? '' : PORTFOLIO}
           component={Link}
           to={portfolio}
           smooth={true}
@@ -94,8 +94,8 @@ const Header = (props: TabPropsInterface) => {
           value={PORTFOLIO}
         />
         <Tab
-          icon={isSmallScreen ? <WorkIcon /> : undefined} // Use undefined instead of null
-          label={isSmallScreen ? '' : PROJECTS} // Use empty string instead of null
+          icon={isSmallScreen ? <WorkIcon /> : undefined}
+          label={isSmallScreen ? '' : PROJECTS}
           component={Link}
           to={projects}
           smooth={true}
@@ -103,8 +103,8 @@ const Header = (props: TabPropsInterface) => {
           value={PROJECTS}
         />
         <Tab
-          icon={isSmallScreen ? <BuildIcon /> : undefined} // Use undefined instead of null
-          label={isSmallScreen ? '' : SERVICES} // Use empty string instead of null
+          icon={isSmallScreen ? <BuildIcon /> : undefined}
+          label={isSmallScreen ? '' : SERVICES}
           component={Link}
           to={services}
           smooth={true}
@@ -112,8 +112,8 @@ const Header = (props: TabPropsInterface) => {
           value={SERVICES}
         />
         <Tab
-          icon={isSmallScreen ? <ContactMailIcon /> : undefined} // Use undefined instead of null
-          label={isSmallScreen ? '' : CONTACT} // Use empty string instead of null
+          icon={isSmallScreen ? <ContactMailIcon /> : undefined}
+          label={isSmallScreen ? '' : CONTACT}
           component={Link}
           to={contact}
           smooth={true}

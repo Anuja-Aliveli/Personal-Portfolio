@@ -38,12 +38,17 @@ const Home = () => {
             </Typography>
           </Box>
           <Box sx={{ marginTop: '20px' }}>
-            <Button
-              variant="contained"
-              color="primary"
-              startIcon={<DownloadIcon />}>
-              Download CV
-            </Button>
+            <a
+              href="/resume.pdf"
+              download="Anuja_Resume.pdf"
+              style={{ textDecoration: 'none' }}>
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<DownloadIcon />}>
+                Download CV
+              </Button>
+            </a>
           </Box>
           <Box sx={{ marginTop: '20px' }}>
             {homeData.links.map((item, index) => (
