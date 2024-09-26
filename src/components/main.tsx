@@ -14,33 +14,8 @@ import {
   projects,
   services,
 } from './constants';
-import { useEffect, useState } from 'react';
 
 const Main = () => {
-  const [tabValue, setTabValue] = useState(home);
-
-  const handleScroll = () => {
-    const sections = [home, about, portfolio, projects, services, contact];
-    const scrollY = window.scrollY;
-
-    sections.forEach((section) => {
-      const element = document.getElementById(section);
-      if (element) {
-        const { offsetTop, clientHeight } = element;
-        if (scrollY >= offsetTop - 50 && scrollY < offsetTop + clientHeight) {
-          setTabValue(section);
-        }
-      }
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <Box sx={{ boxShadow: 'none !important', marginTop: '50px' }}>
       <Element name={home} id={home}>
